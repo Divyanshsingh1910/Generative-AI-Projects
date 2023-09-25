@@ -1,0 +1,21 @@
+import numpy as np
+import string
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Embedding, LSTM, Dense, Lambda, Conv1D
+from tensorflow.keras import backend as K
+
+def root_mean_squared_error(y_true, y_pred):
+    return tf.sqrt(tf.reduce_mean(tf.square(y_pred - y_true)))
+# Model architecture
+model = Sequential()
+
+model.add(Embedding(input_dim=28, output_dim=32, input_length=30))
+model.add(Conv1D(filters=64, kernel_size=3, activation='relu'))
+model.add(LSTM(192))
+model.add(Dense(64, activation='tanh'))
+model.add(Dense(26, activation='softmax'))
+
+# Compile the model
+optimizer = tf.keras.optimizers.Adam(learning_rate=0.001,beta_1=0.8,beta_2=0.6)
+model.compile(optimizer=optimizer, loss=root_mean_squared_error, metrics=['accuracy'])
