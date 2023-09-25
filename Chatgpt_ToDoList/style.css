@@ -1,0 +1,102 @@
+body {
+	background-color: #2b2b2b;
+	color: #ffffff;
+    font-family: sans-serif;
+}
+
+.container {
+	width: 60%;
+	margin: 50px auto;
+	padding: 20px;
+	background-color: #3a3a3a;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+h1 {
+	text-align: center;
+    color: #52caee;
+}
+
+form {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+input[type="text"] {
+	flex-grow: 1;
+	padding: 10px;
+	font-size: 18px;
+	border: none;
+	background-color: #252525;
+	color: #ffffff;
+    border-radius: 8px;
+}
+
+button[type="submit"] {
+	padding: 10px;
+    width: 10%;
+	font-size: 18px;
+	background-color: #057ea3;
+	color: #ffffff;
+	border: none;
+	cursor: pointer;
+    border-radius: 5px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+    font-family: monospace;
+}
+
+li input[type="checkbox"] {
+	margin-right: 10px;
+	transform: scale(1.5);
+}
+
+li label {
+	flex-grow: 1;
+	font-size: 18px;
+}
+
+li button.delete-btn {
+	padding: 5px;
+	background-color: #04a009;
+	color: #ffffff;
+	border: none;
+	cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 7%;
+}
+.quote {
+    background-color: #3a3a3a;;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 60%;
+    margin-left: 18.7%;
+    
+  }
+  
+  .quote p {
+    font-size: 20px;
+    font-family:  monospace;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .quote .author {
+    text-align: right;
+    font-weight: bold;
+  }
